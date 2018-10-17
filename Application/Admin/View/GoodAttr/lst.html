@@ -1,0 +1,74 @@
+<layout name="layout" />
+
+<!-- 搜索 -->
+<div class="form-div search_form_div">
+    <form action="__ACTION__" method="GET" name="search_form">
+              	<p>
+			类型：
+	   		<?php buildSelect('good_type', 'type_id', 'id', 'type_name',I('get.type_id')); ?>
+		</p>
+		<p>
+			属性名称：
+	   		<input type="text" name="attr_name" size="30" value="<?php echo I('get.attr_name'); ?>" />
+		</p>
+	
+		
+	
+		<p><input type="submit" value=" 搜索 " class="button" /></p>
+    </form>
+</div>
+<!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >类型id</th>
+            <th >属性名称</th>
+            <th >属性本身的类型</th>
+            <th >属性的输入类型</th>
+            <th >属性的可选值</th>
+			<th width="60">操作</th>
+        </tr>
+		<?php foreach ($data as $k => $v): ?>            
+			<tr class="tron">
+				<td><?php echo $v['type_id']; ?></td>
+				<td><?php echo $v['attr_name']; ?></td>
+				<td><?php  
+                                    switch($v['atrr_type']){
+                                    case 1:
+                                    echo '唯一属性';
+                                      break;
+                                      case 2:
+                                    echo '单选属性';
+                                    break;
+                                      case 3: 
+                                    echo '多选属性';
+                                    break;
+                                    }
+                                    ?></td>
+				<td><?php 
+                                     switch($v['attr_input_type']){
+                                    case 1:
+                                    echo '手工输入';
+                                      break;
+                                      case 2:
+                                    echo '列表选择';
+                                    break;
+                                      case 3: 
+                                    echo '多行文本';
+                                    break;
+                                    }?></td>
+				<td><?php echo $v['attr_value']; ?></td>
+		        <td align="center">
+		        	<a href="<?php echo U('edit?id='.$v['id'].'&type_id='.I('get.type_id')); ?>" title="编辑">编辑</a> |
+	                <a href="<?php echo U('delete?id='.$v['id'].'&type_id='.I('get.type_id')); ?>" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+        <?php endforeach; ?> 
+		<?php if(preg_match('/\d/', $page)): ?>  
+        <tr><td align="right" nowrap="true" colspan="99" height="30"><?php echo $page; ?></td></tr> 
+        <?php endif; ?> 
+	</table>
+</div>
+
+<script>
+</script>

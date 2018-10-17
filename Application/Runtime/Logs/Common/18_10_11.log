@@ -1,0 +1,12 @@
+[ 2018-10-11T15:06:13+08:00 ] 127.0.0.1 /index.php/member/login/callback=http://www.myshop2.com.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Member
+
+[ 2018-10-11T15:19:33+08:00 ] 127.0.0.1 /index.php/index.php/Home/Cart/lst.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Index.php
+

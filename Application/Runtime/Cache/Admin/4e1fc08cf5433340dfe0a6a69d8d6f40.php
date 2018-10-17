@@ -1,0 +1,33 @@
+<?php if (!defined('THINK_PATH')) exit();?><div class="tab-div">
+    <div id="tabbody-div">
+        <form enctype="multipart/form-data" action="/index.php/Admin/Brand/edit/id/4.html" method="post">
+             <input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
+		<input type="hidden" name="old_logo" value="<?php echo $data['logo']; ?>" />
+        	<!-- 基本信息 -->
+            <table width="90%" class="tab_table" align="center">
+                <tr>
+                    <td class="label">品牌名称：</td>
+                    <td><input type="text" name="brand_name" value="<?php echo $data['brand_name']; ?>" size="60" />
+                    <span class="require-field">*</span></td>
+                </tr>
+                <tr>
+                    <td class="label">官方地址：</td>
+                    <td><input type="text" name="site_url" size="60" value="<?php echo $data['site_url']; ?>" /></td>
+                </tr>
+        <tr>
+                    <td class="label">品牌logo：</td>
+                    <td><input type="file" name="logo" size="60"  />
+                        <p><?php showImage($data['logo']); ?></p>
+                    </td>
+                </tr>
+               
+            </table>
+
+            <div class="button-div">
+                <input type="submit" value=" 确定 " class="button"/>
+                <input type="reset" value=" 重置 " class="button" />
+            </div>
+            
+        </form>
+    </div>
+</div>

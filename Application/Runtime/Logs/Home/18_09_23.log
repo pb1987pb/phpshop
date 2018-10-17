@@ -1,0 +1,61 @@
+[ 2018-09-23T23:50:39+08:00 ] 127.0.0.1 /index.php/Home/Goods/ajaxGetPrice/id/38.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010473s ]
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.1641s ]
+SQL: SELECT * FROM `pan_good_category`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0710s ]
+SQL: SELECT `promote_price` FROM `pan_goods` WHERE `id` = 38 LIMIT 1   [ RunTime:0.0144s ]
+SQL: SELECT `shop_price` FROM `pan_goods` WHERE `id` = 38 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009851s ]
+
+[ 2018-09-23T23:50:45+08:00 ] 127.0.0.1 /index.php/Home/Goods/ajaxGetPrice/id/39.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001298s ]
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.0113s ]
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0091s ]
+SQL: SELECT `promote_price` FROM `pan_goods` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `shop_price` FROM `pan_goods` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001118s ]
+
+[ 2018-09-23T23:50:54+08:00 ] 127.0.0.1 /index.php/Home/Goods/ajaxGetPrice/id/40.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001514s ]
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0135s ]
+SQL: SELECT `promote_price` FROM `pan_goods` WHERE `id` = 40 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `shop_price` FROM `pan_goods` WHERE `id` = 40 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001745s ]
+
+[ 2018-09-23T23:52:04+08:00 ] 127.0.0.1 /index.php/Home/Goods/ajaxGetPrice/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.0321s ]
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0228s ]
+SQL: SELECT `promote_price` FROM `pan_goods` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `shop_price` FROM `pan_goods` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002662s ]
+

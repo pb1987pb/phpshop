@@ -1,0 +1,1050 @@
+[ 2018-08-17T21:11:10+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2018-08-17T21:11:10+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2018-08-17T21:11:10+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2018-08-17T21:11:10+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000414s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2018-08-17T21:11:14+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0095s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2018-08-17T21:20:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2018-08-17T21:20:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2018-08-17T21:20:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001828s ]
+
+[ 2018-08-17T21:20:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000850s ]
+
+[ 2018-08-17T21:20:24+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0166s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+
+[ 2018-08-17T21:33:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-08-17T21:33:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003128s ]
+
+[ 2018-08-17T21:33:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2018-08-17T21:33:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002774s ]
+
+[ 2018-08-17T21:33:35+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+
+[ 2018-08-17T21:33:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2018-08-17T21:33:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001729s ]
+
+[ 2018-08-17T21:33:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2018-08-17T21:33:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002445s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002681s ]
+
+[ 2018-08-17T21:33:52+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0424s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+
+[ 2018-08-17T21:34:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2018-08-17T21:34:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001242s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001082s ]
+
+[ 2018-08-17T21:34:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021880s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002364s ]
+
+[ 2018-08-17T21:34:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000469s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001399s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001416s ]
+
+[ 2018-08-17T21:34:30+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2018-08-17T21:34:31+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2018-08-17T21:34:33+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0076s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2018-08-17T22:20:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2018-08-17T22:20:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000856s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2018-08-17T22:20:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001415s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-08-17T22:20:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001787s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000874s ]
+
+[ 2018-08-17T22:20:49+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+
+[ 2018-08-17T23:39:30+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0065s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant config - assumed 'config' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Undefined variable: Think D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+NOTIC: [8] Use of undefined constant DB_TYPE - assumed 'DB_TYPE' D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\12cf6a5c74297688873998de0720405d.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2018-08-17T23:41:12+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0066s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2018-08-17T23:48:40+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `pan_goods` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `pan_member_level` [ RunTime:0.0085s ]
+SQL: SELECT `id`,`level_name` FROM `pan_member_level` ORDER BY jifen_bottom asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `pan_member_price` [ RunTime:0.0661s ]
+SQL: SELECT `level_id`,`price` FROM `pan_member_price` WHERE `good_id` = '19'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 4 D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 101 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024779s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2018-08-17T23:48:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001087s ]
+
+[ 2018-08-17T23:48:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001661s ]
+
+[ 2018-08-17T23:48:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002125s ]
+
+[ 2018-08-17T23:48:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2018-08-17T23:49:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2018-08-17T23:49:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001601s ]
+
+[ 2018-08-17T23:49:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2018-08-17T23:49:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001014s ]
+
+[ 2018-08-17T23:49:32+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0092s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2018-08-17T23:49:44+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `pan_goods` WHERE `id` = 19 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `pan_member_level` [ RunTime:0.0062s ]
+SQL: SELECT `id`,`level_name` FROM `pan_member_level` ORDER BY jifen_bottom asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `pan_member_price` [ RunTime:0.0067s ]
+SQL: SELECT `level_id`,`price` FROM `pan_member_price` WHERE `good_id` = '19'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0072s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 4 D:\phpStudy\PHPTutorial\WWW\testshop\Application\Runtime\Cache\Admin\608b0c961c661bd6d45820311b4b75a7.php 第 101 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2018-08-17T23:55:52+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0065s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2018-08-17T23:58:23+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\phpStudy\PHPTutorial\WWW\testshop\Application\Admin\Model\GoodsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.brand_name FROM pan_goods a left join pan_brand b on a.brand_id = b.id  ORDER BY addtime desc LIMIT 5,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0066s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand`  [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+

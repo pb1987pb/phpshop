@@ -1,0 +1,557 @@
+<layout name="Common/layout" />
+
+<link rel="stylesheet" href="__PUBLIC__/Home/style/fillin.css" type="text/css">
+<style>
+ .address_wrap .choose {position:relative;width:15px;height:15px;margin:10px 10px 0 14px;}
+ .address .shouhuo {font-size:16px;padding:20px 0 13px;font-weight:bold;}
+.choose img {position:absolute;left:0;top:0;}
+.choose .yincang {display:none;}
+
+ .address_wrap li {line-height:34px;font-size:13px;cursor:pointer;border:1px solid white;padding-right:10px;}
+ .address_wrap li.cur {background-color:#FFF2EE;border:1px solid #EC6941;}
+ .address_wrap li.cur .yincang {display:block;}
+
+
+ .address_wrap li.cur .xg_add {display:block;}
+ .address_wrap li:not(.cur):hover {background-color:#EEEEEE;}
+ .address_wrap li:not(.cur):hover  .shmr {color:#EC6941;text-decoration:underline;}
+
+ .address_wrap .xg_add {color:#EC6941;text-decoration:underline;}
+ .address_wrap .shmr,.address_wrap .mren {padding:0 6px;}
+ .address_wrap .shmr{display: block;}
+
+ .address_wrap .jianju{padding:0 4px;}
+ .address .add_new {padding:17px 0 35px;cursor:pointer;}
+ 
+ 
+.beizhu .beizhu_name {font-size:16px;padding-bottom:12px;font-weight:bold;}
+.beizhu .beizhu_context {border:1px solid #DADADA;resize:none;width:869px;padding:12px;height:68px;}
+
+.pay_type {padding-left:11px;cursor:pointer;}
+.pay_type .img_conte{width:15px;height:15px;position:relative;margin:3px 11px 0 0}
+.img_conte .hidd {position:absolute;left:0;top:0px;display:none;}
+.pay_type.cur .img_conte .hidd {display:block;}
+.payleixing .weixin {margin-right:-11px;}
+ 
+ /*地址表单开始*/
+.form_yuyue {width:550px;background-color:white;padding:0 50px;padding-bottom:40px;font-size:14px;}
+.form_yuyue .biantou {font-size:22px;padding:30px 0 20px;text-align:center;}
+.form_yuyue .xian {width:550px;height:12px;display:block;margin:0 auto;}
+.form_yuyue .xian_wrap {padding-bottom:20px;}
+.form_yuyue label {display:block;margin-bottom:20px;}
+
+.form_yuyue label span {width:80px;display:inline-block;vertical-align:middle;}
+.form_yuyue label input {width:448px;height:20px;border:1px solid #B5B5B5;padding-left:20px;vertical-align:middle;padding:10px 0 10px 20px;line-height:20px;}
+
+.form_yuyue select {color:#535353;}
+
+.form_yuyue .dizhi {padding-bottom:20px;}
+.form_yuyue .peisong {width:80px;}
+.form_yuyue textarea {width:448px;border:1px solid #B5B5B5;display:inline-block;resize:none;padding:3px 10px;}
+.form_yuyue .shenqin {display:block;height:45px;text-align:center;line-height:45px;color:white;background-color:#363942;margin-left:80px;}
+
+</style>
+
+	
+        <include file="Common/ordertop" from="myorder"/>
+	
+        <!-- 页面头部 end -->
+	
+	<div style="clear:both;"></div>
+
+	<!-- 主体部分 start -->
+	<div class="fillin w990 bc mt15">
+            <form  action="__SELF__"  method="post" name="orderform" >
+                
+                <input type="hidden" name="ids" value="<?php echo $ids;?>">
+                 <input type="hidden" name="cur_name" value="">
+                 <input type="hidden" name="cur_tel" value="">
+                 <input type="hidden" name="cur_province" value="">
+                 <input type="hidden" name="cur_city" value="">
+                 <input type="hidden" name="cur_area" value="">
+                   <input type="hidden" name="cur_address" value="">
+                    <input type="hidden" name="pay_type" value="1">
+                    
+                <div class="fillin_hd">
+			<h2>填写并核对订单信息</h2>
+		</div>
+
+		
+			<!-- 收货人信息  start-->
+			
+                           
+                             <div class="address">
+                         <p class="shouhuo">收货地址</p>
+                         <ul class="address_wrap" id="address_wrap">
+                
+                         </ul>
+                          <div class="add_new">
+<p id="zengjiaadd"><img src="__PUBLIC__/Home/images/add_new.png"/></p>
+                          </div>
+                     
+                     </div>
+                                
+
+
+			<!-- 商品清单 start -->
+			<div class="goods">
+				<h3>商品清单</h3>
+				<table>
+					<thead>
+						<tr>
+							<th class="col1">商品名称</th>
+							<th class="col2">商品信息</th>
+							<th class="col3">单价</th>
+							<th class="col4">数量</th>	
+							<th class="col5">小计</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php 
+						$tp = 0; // 总价
+						foreach ($cartData as $k => $v):
+                                                   if($v['is_on_sale'] == '否')
+                                                   continue;
+                                                ?>
+						<tr>
+							<td class="col1"><a href=""><?php showImage($v['mid_logo']); ?></a>  
+							<strong><a href="<?php echo U('Index/goods?id='.$v['goods_id']); ?>"><?php echo $v['goods_name']; ?></a></strong></td>
+							<td class="col2"> 
+								<?php foreach ($v['attr'] as $k1 => $v1): ?>
+									<p><?php echo $v1['attr_name']; ?>：<?php echo $v1['attr_value']; ?></p>
+								<?php endforeach; ?>
+							</td>
+							<td class="col3">￥<span><?php echo $v['price']; ?>元</span></td>
+							<td class="col4"><?php echo $v['goods_number']; ?></td>
+							<td class="col5">￥<span><?php $xj = $v['price'] * $v['goods_number'];$tp+=$xj;echo $xj; ?></span></td>
+						</tr>
+                                            
+						<?php endforeach; ?>
+					</tbody>
+			
+				</table>
+			</div>
+			<!-- 商品清单 end -->
+                        
+                        <!-- 备注 start -->
+                           <div class="beizhu">
+                         <p class="beizhu_name">备注</p>
+                         <textarea class="beizhu_context" name="beizhu" placeholder="填写备注..."></textarea>
+                     </div>
+                        <!-- 备注 end -->
+		
+                         <!-- 支付 start -->
+                                <div class="clear payleixing" id="pay">
+                             <div class="pay_type f_right weixin cur" data-type="1">
+                             <div class="img_conte f_left">
+                                <img src="__PUBLIC__/Home/images/no_check.png" class="show"/><img src="__PUBLIC__/Home/images/check.png" class="hidd"/>
+                             </div>
+                             <div class="tu f_left"><img src="__PUBLIC__/Home/images/pay02.png"/></div></div>
+                             <div class="pay_type f_right" data-type="2">
+                             <div class="img_conte f_left">
+                                <img src="__PUBLIC__/Home/images/no_check.png" class="show"/><img src="__PUBLIC__/Home/images/check.png" class="hidd"/>
+                             </div>
+                             <div class="tu f_left"><img src="__PUBLIC__/Home/images/pay01.png"/></div></div>
+                                 
+                         </div>
+                          <!-- 支付 start -->
+                        
+		 </form>   
+
+		<div class="fillin_ft">
+			<a onclick="orderchck();" href="javascript:void(0);"><span>提交订单</span></a>
+			<p>应付总额：<strong>￥<?php echo $tp; ?>元</strong></p>
+			
+		</div>
+          
+		
+	</div>
+	<!-- 主体部分 end -->
+        
+        
+     
+           <script type="text/html" id='addtemp'>
+                 
+        <div class="address_select" >
+                                 <form class="form_yuyue" id="form_caozuo">
+                                     <input type="hidden" name="id" value="{{id}}"/>
+            <p class="biantou">{{title}}</p>
+            <div class="xian_wrap"><img src="__PUBLIC__/Home/images/xiexian.png"  class="xian"/></div>
+            <label><span>姓名*：</span><input type="text" name="shr_name" value="{{shr_name}}"/></label>
+              <label><span>手机*：</span><input type="text" name="shr_tel" value="{{shr_tel}}"/></label>
+            <div class="dizhi clear">
+                <p class="f_left peisong">配送地址*：</p>
+                <p class="xzpc f_left">
+                <select class="seladd" name="shr_province"></select>
+                <select class="seladd" name="shr_city" ></select>
+                <select class="seladd" name="shr_area"></select>
+            </p>
+            </div>
+            <label class="clear"><span class="f_left">详细地址*：</span>
+                <textarea class="f_left" name="shr_address">{{shr_address}}</textarea>
+            </label>
+           
+   <p><input type="checkbox" name="is_default" value="是" {{if is_default=="是"}} checked {{/if}} >设置为默认地址</p> 
+ 
+            <a href="javascript:;" class="quedin" id="quedin">确定</a>
+              <a href="javascript:;" id="qx">取消</a>
+        </form>
+				</div>
+            
+        </script>
+        
+        
+        <script id="allAdd" type="text/html">
+            {{each list as value}} 
+                     <li data-id="{{value.id}}"  class="clear  {{value.curclass}}"
+                         data-sign="{{value}}">
+                                  <div class="choose f_left" onclick="che({{value.id}})">
+                             <img src="__PUBLIC__/Home/images/no_check.png" class="xianshi"/>
+                              <img src="__PUBLIC__/Home/images/check.png" class="yincang"/>
+                         </div>
+                         <p class="f_left dizhidetail" onclick="che({{value.id}})"><span>{{value.shr_province}}</span>
+                             <span class="jianju">{{value.shr_area}}</span>
+                             <span>{{value.shr_city}}</span>
+                             <span class="jianju">{{value.shr_address}}</span>  <span>（</span><span>{{value.shr_name}}</span><span> 收）</span><span class="jianju">{{value.shr_tel}}</span></p>
+                          
+                         {{if value.is_default=="是"}} 
+                          <p class="f_left mren">默认地址</p>
+                         {{ else }}
+                         <p class="f_left shmr" onclick="setdeault({{value.id}});">设置为默认地址</p>
+                         {{/if}} 
+                        
+                         
+
+                                 <p class="f_right xg_add sc" onclick="del({{value.id}})"> 删除地址</p><p class="f_right xg_add" onclick="editAdd({{value}})">修改地址 | </p>
+                             </li>
+                              {{/each}} 
+        </script>
+        
+        
+        
+        <script type="text/javascript" src="__PUBLIC__/Home/js/CityJs.js"></script>
+         <script type="text/javascript" src="__PUBLIC__/Home/js/layer-v3.0.3/layer/layer.js"></script>
+         
+             <script type="text/javascript" src="__PUBLIC__/Home/js/template-web.js"></script>
+             
+             
+        <script>
+            
+               var ischeck=0;
+                 var adddata={};
+      
+            
+            $(function(){
+                  init();// 初始化地址数据
+                  
+            // 点击添加新地址
+    $('#zengjiaadd').click(function(){
+             
+            var value ={};
+            value.title="新增地址";
+               value.shr_province="广东省";
+               value.shr_city="深圳市";
+               value.shr_area="福田区";
+               value.is_default="是";
+               changeAdd(value,"ajaxAdd");
+          
+    });        
+  
+       // 点击付款方式
+      $("#pay .pay_type").click(function () {
+               $(this).addClass("cur").siblings().removeClass("cur");
+                   
+              $(':hidden[name="pay_type"]').val( $(this).data('type'))
+            });
+         });
+
+
+
+
+
+
+        //  点击选中地址
+    function che(id)
+    {
+        ischeck=id;
+        data=adddata.list
+          for(var j = 0,len=data.length;j < len; j++)
+             {
+               if(data[j]['id']==ischeck)
+                    data[j]['curclass']="cur"; 
+                else
+                    data[j]['curclass']=""
+              }
+            adddata.list=data;
+            var html = template('allAdd', adddata); 
+            $('#address_wrap').html(html);
+    }
+    
+    //修改地址
+      function	editAdd(value)
+      {
+               value.title="修改地址";
+               changeAdd(value,"ajaxEdit");
+      }
+  
+  
+
+
+
+
+//设置默认地址
+  function setdeault(id)
+        {
+                     $.ajax({
+	type : "get",
+	url : "/index.php/Home/Address/ajaxDefault/id/"+id,
+	dataType : "json",
+	success : function(data)
+	{
+            if(data.code==1){
+               init();
+               
+            }    
+	}
+});
+        }
+     // 删除地址
+     function del(id)
+     {
+         var index=layer.confirm('您确定删除这个收货地址？', {
+  btn: ['确定','取消'] //按钮
+}, function(){
+        
+                 $.ajax({
+	type : "get",
+	url : "/index.php/Home/Address/ajaxDel/id/"+id,
+	dataType : "json",
+	success : function(data)
+	{
+            if(data.code==1){
+               if(id == ischeck){
+                   //删除的是选中的，那么此时选中的就要设置为0
+                   ischeck = 0 ;
+               }
+               init();
+                 layer.close(index);  // 关闭当前层
+            }    
+	}
+});
+  
+}, function(){
+    // 点击取消，这里什么代码都不用写，自己关闭层
+  
+});
+
+         
+     }
+    
+    
+    
+    
+    // 增加地址和修改自己的通用方法
+    
+   function changeAdd(value,action)
+   {
+             var xgtc = template('addtemp',value);
+                       var index =  layer.open({
+  type: 1,
+  title : false,
+  area: ['650px', '440px'], //宽高
+  content: xgtc,
+  success:function(){
+       // 设置 地址
+       new PCAS("shr_province", "shr_city", "shr_area", value.shr_province, value.shr_city, value.shr_area);
+       
+      $('#qx').click(function(){
+           layer.close(index);  // 关闭当前层
+       });
+       
+       //修改地址点击确定
+       $('#quedin').click(function(){
+           
+            var resudata=check(); //前端验证
+          if(resudata){
+              // 前端验证都通过了就发送ajax到后台修改操作
+                $.ajax({
+   type:'POST',
+   data:$('#form_caozuo').serialize(),
+   url :"/index.php/Home/Address/"+action,
+	dataType : "json",
+   success:function(data){   
+    if(data.code==1){
+           // 修改成功,或者增加成功，都把这个选中
+        ischeck=data.id;
+        init();
+        layer.close(index);  // 关闭当前层
+ 
+    }else
+    {
+        // 添加地址失败
+         layer.msg(data.mes);     
+    }          
+}
+
+});
+          }
+           
+       });
+      
+  }
+              
+              }); 
+       
+       
+   }
+    
+ 
+        
+	
+   //  增加收货地址或者修改收货地址前端验证
+function check(){
+         var name = $.trim($('input[name="shr_name"]').val());
+	 var tel = $.trim($('input[name="shr_tel"]').val());
+	 var province = $.trim($('select[name="shr_province"]').val());
+         var city = $.trim($('select[name="shr_city"]').val());
+         var area = $.trim($('select[name="shr_area"]').val());
+         var address = $.trim($('textarea[name="shr_address"]').val());
+
+   return  valData(name,tel,province,city,area,address);
+}
+// 对数据进行验证
+
+function valData(name,tel,province,city,area,address)
+{
+      if(name == ""){
+      layer.msg('收货人姓名不能为空');
+      return false;
+    }  
+ if(tel == ""){
+      layer.msg('收货人手机号码不能为空');
+      return false;
+    }
+    
+    if(!isPoneAvailable(tel)){
+      layer.msg('收货人手机号码不正确');
+      return false;
+    }
+   if(province == ""){
+      layer.msg('收货人省份不能为空');
+      return false;
+    }
+     if(city == ""){
+      layer.msg('收货人城市不能为空');
+      return false;
+    }
+  if(area == ""){
+      layer.msg('收货人地区不能为空');
+      return false;
+    }
+    if(address == ""){
+      layer.msg('收货人详情地址不能为空');
+      return false;
+    }
+    //上面的所有的都验证完了，那么就是前端验证通过了。
+    return true;
+}
+
+// 手机号码验证
+function isPoneAvailable(str) {
+            var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+            if (!myreg.test(str)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+//订单提交前表单验证
+function orderchck(){
+    
+    
+     var $li= $('#address_wrap li.cur');
+     if($li.length==0)
+     {
+         layer.msg('必须选择收货地址');
+      return false;
+     }
+       var $mesf=  $li.data('sign');
+ 
+      
+ name = $mesf.shr_name;
+ tel = $mesf.shr_tel;
+ province = $mesf.shr_province
+ city = $mesf.shr_city ;
+ area = $mesf.shr_area ;
+ address = $mesf.shr_address ;
+ 
+  if(valData(name,tel,province,city,area,address))
+      {
+          //验证通过
+          $(':hidden[name="cur_name"]').val(name);
+       $(':hidden[name="cur_tel"]').val(tel);
+       $(':hidden[name="cur_province"]').val(province);
+       $(':hidden[name="cur_city"]').val(city);
+       $(':hidden[name="cur_area"]').val(area);
+       $(':hidden[name="cur_address"]').val(address);
+       // 提交表单
+          document.forms['orderform'].submit();
+      }
+      
+
+ 
+
+    
+    
+}
+
+
+
+
+function init(){
+                 $.ajax({
+	type : "get",
+	url : "/index.php/Home/Address/ajaxAlladd",
+	dataType : "json",
+	success : function(data)
+	{
+   
+              if(!ischeck)
+              {
+               for(var j = 0,len=data.length;j < len; j++)
+                   {
+               
+               if(data[j]['is_default']=="是")
+               {
+                    data[j]['curclass']= 'cur';
+                    ischeck=data[j]['id'];
+                    break;
+               }
+
+                   }
+                   
+                 if(data.length && !ischeck)
+                 {
+                     // 如果能走到这里面来，那就是说明能查询到有地址，但是地址都没有默认的，那么此时我们就
+                     //  强行设置第一个是默认选中的
+                     data[0]['curclass']= 'cur';
+                     ischeck=data[0]['id'];
+                 }  
+                   
+                   
+              }else{
+                    for(var j = 0,len=data.length;j < len; j++)
+                 {
+ 
+               if(data[j]['id']==ischeck)
+                    data[j]['curclass']="cur"; 
+              }
+          }
+            adddata.list=data;
+            var html = template('allAdd', adddata); 
+            $('#address_wrap').html(html);  
+	}
+});
+}
+        </script>

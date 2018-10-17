@@ -1,0 +1,12 @@
+[ 2018-10-13T20:24:19+08:00 ] 127.0.0.1 /index.php/Order/add/ids5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+ERR: 无法加载模块:Order
+
+[ 2018-10-13T20:25:37+08:00 ] 127.0.0.1 /index.php/Order/add/ids5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+ERR: 无法加载模块:Order
+

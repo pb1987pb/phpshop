@@ -1,0 +1,233 @@
+[ 2018-09-26T10:23:59+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-26T10:24:00+08:00 ] 127.0.0.1 /index.php/Admin/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pan_admin` [ RunTime:0.0100s ]
+SQL: select * from pan_admin where md5(concat(id,'pan')) ='f8099218d0d092a47ef92352b6723346' and md5(concat(password,'pan')) ='bda4b39fdbd626711df8695f73eb17c6' [ RunTime:0.0010s ]
+
+[ 2018-09-26T10:24:00+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-26T10:24:00+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-09-26T10:24:02+08:00 ] 127.0.0.1 /index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `pan_privilege` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `pan_privilege`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-09-26T10:24:02+08:00 ] 127.0.0.1 /index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-26T11:41:07+08:00 ] 127.0.0.1 /index.php/admin/goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pan_privilege` [ RunTime:0.0170s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodsModel.class.php 第 505 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.brand_name,c.catename,group_concat(distinct e.catename separator "<br/>") ext_id FROM pan_goods a left join pan_brand b on a.brand_id = b.id
+                                left join pan_good_category c on a.category_id = c.id
+                                left join pan_good_cat d on a.id = d.good_id
+                                left join pan_good_category e on d.category_id = e.id  GROUP BY a.id ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0090s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodCategoryModel::_before_delete() should be compatible with Think\Model::_before_delete($options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodCategoryModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `pan_good_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand` ORDER BY id asc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-09-26T11:41:20+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `pan_privilege` [ RunTime:0.0160s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodsModel.class.php 第 505 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `pan_goods` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pan_member_level` [ RunTime:0.0090s ]
+SQL: SELECT a.id,a.level_name,b.price FROM pan_member_level a left join pan_member_price b on (b.level_id=a.id and b.good_id=30)  ORDER BY a.jifen_bottom asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pan_good_phone` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`mid_pic` FROM `pan_good_phone` WHERE `good_id` = '30'  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodCategoryModel::_before_delete() should be compatible with Think\Model::_before_delete($options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodCategoryModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `pan_good_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `pan_good_cat` [ RunTime:0.0040s ]
+SQL: SELECT `category_id` FROM `pan_good_cat` WHERE `good_id` = '30'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pan_good_attr` [ RunTime:0.0040s ]
+SQL: SELECT a.id attr_id,a.attr_name,a.atrr_type,a.attr_value arrvalue,a.attr_input_type,b.attr_value,b.id FROM pan_good_attr a left join pan_shangpin_attr b on (b.attr_id = a.id and b.good_id =30)  WHERE a.type_id = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand` ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `pan_good_type` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`type_name` FROM `pan_good_type` ORDER BY id asc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-26T11:42:13+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pan_privilege` [ RunTime:0.0160s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodsModel.class.php 第 505 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `pan_member_price` [ RunTime:0.0090s ]
+SQL: DELETE FROM `pan_member_price` WHERE `good_id` = 30 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pan_good_phone` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `pan_good_cat` [ RunTime:0.0050s ]
+SQL: DELETE FROM `pan_good_cat` WHERE `good_id` = 30 [ RunTime:0.0010s ]
+SQL: INSERT INTO `pan_good_cat` (`good_id`,`category_id`) VALUES ('30','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pan_shangpin_attr` [ RunTime:0.0050s ]
+SQL: UPDATE `pan_goods` SET `brand_id`='0',`category_id`='17',`goods_name`='的 地方',`market_price`='256.00',`shop_price`='250.00',`is_on_sale`='是',`is_delete`='否',`promote_price`='0.00',`promote_start_date`='0100-01-01 00:00:00',`promote_end_date`='0100-01-01 00:00:00',`is_new`='否',`is_hot`='否',`is_best`='否',`is_floor`='否',`sort_num`='100',`goods_desc`='',`type_id`='1' WHERE `id` = 30 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-09-26T11:42:15+08:00 ] 127.0.0.1 /index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pan_privilege` [ RunTime:0.0130s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodsModel.class.php 第 505 行.
+SQL: SHOW COLUMNS FROM `pan_goods` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM pan_goods a LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.brand_name,c.catename,group_concat(distinct e.catename separator "<br/>") ext_id FROM pan_goods a left join pan_brand b on a.brand_id = b.id
+                                left join pan_good_category c on a.category_id = c.id
+                                left join pan_good_cat d on a.id = d.good_id
+                                left join pan_good_category e on d.category_id = e.id  GROUP BY a.id ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0080s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodCategoryModel::_before_delete() should be compatible with Think\Model::_before_delete($options) C:\phpStudy\PHPTutorial\WWW\shop\Application\Admin\Model\GoodCategoryModel.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `pan_good_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `pan_good_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `pan_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `pan_brand` ORDER BY id asc  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
