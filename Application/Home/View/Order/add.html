@@ -61,21 +61,12 @@
 
 	<!-- 主体部分 start -->
 	<div class="fillin w990 bc mt15">
-            <form  action="__SELF__"  method="post" name="orderform" >
-                
-                <input type="hidden" name="ids" value="<?php echo $ids;?>">
-                 <input type="hidden" name="cur_name" value="">
-                 <input type="hidden" name="cur_tel" value="">
-                 <input type="hidden" name="cur_province" value="">
-                 <input type="hidden" name="cur_city" value="">
-                 <input type="hidden" name="cur_area" value="">
-                   <input type="hidden" name="cur_address" value="">
-                    <input type="hidden" name="pay_type" value="1">
+       
                     
                 <div class="fillin_hd">
 			<h2>填写并核对订单信息</h2>
 		</div>
-
+            <input type="hidden" name="ids" value="<?php echo $ids?>"/>
 		
 			<!-- 收货人信息  start-->
 			
@@ -195,7 +186,6 @@
  
             <a href="javascript:;" class="quedin" id="quedin">确定</a>
               <a href="javascript:;" id="qx">取消</a>
-        </form>
 				</div>
             
         </script>
@@ -321,7 +311,6 @@
          var index=layer.confirm('您确定删除这个收货地址？', {
   btn: ['确定','取消'] //按钮
 }, function(){
-        
                  $.ajax({
 	type : "get",
 	url : "/index.php/Home/Address/ajaxDel/id/"+id,
@@ -379,7 +368,8 @@
    data:$('#form_caozuo').serialize(),
    url :"/index.php/Home/Address/"+action,
 	dataType : "json",
-   success:function(data){   
+   success:function(data){  
+       
     if(data.code==1){
            // 修改成功,或者增加成功，都把这个选中
         ischeck=data.id;
@@ -469,7 +459,7 @@ function isPoneAvailable(str) {
 //订单提交前表单验证
 function orderchck(){
     
-    
+     
      var $li= $('#address_wrap li.cur');
      if($li.length==0)
      {
@@ -485,25 +475,49 @@ function orderchck(){
  city = $mesf.shr_city ;
  area = $mesf.shr_area ;
  address = $mesf.shr_address ;
- 
   if(valData(name,tel,province,city,area,address))
       {
           //验证通过
-          $(':hidden[name="cur_name"]').val(name);
-       $(':hidden[name="cur_tel"]').val(tel);
-       $(':hidden[name="cur_province"]').val(province);
-       $(':hidden[name="cur_city"]').val(city);
-       $(':hidden[name="cur_area"]').val(area);
-       $(':hidden[name="cur_address"]').val(address);
-       // 提交表单
-          document.forms['orderform'].submit();
-      }
+   $.ajax({
+   type:'POST',
+   data:{
+       cur_name : name,
+       cur_tel : tel,
+       cur_province : province,
+       cur_city : city,
+       cur_area : area,
+       cur_address : address,
+       pay_type: $('.pay_type.cur').data('type'),
+       ids: $('input[name="ids"]').val()
+   },
+   url :"/index.php/Home/Order/ajaxAdd",
+	dataType : "json",
+   success:function(data){ 
+       alert(data.code);
+       if(data.code==-1){
+                //-1,就表示登录过期了，那么这里就要跳转到登录
+                   window.location.href='/index.php/home/member/login';
+               }
+      else if(data.code==1)
+     window.location.href='/index.php/home/Order/pay/order_id/'+data.order_id;
+        else if(data.code==0)
+        {
+         
+           console.log(data.mes); 
+        }
+    }
+   
+
+
+
+      });
       
 
  
 
     
-    
+      }
+      
 }
 
 

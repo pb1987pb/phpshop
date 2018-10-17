@@ -245,6 +245,8 @@
               
               // 去下订单页面
           window.location.href='/index.php/home/Order/add/ids/'+idsstr;
+          
+          
        
             });
             

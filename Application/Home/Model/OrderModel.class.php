@@ -4,13 +4,12 @@ use Think\Model;
 class OrderModel extends Model 
 {
          // 下订单的时候接受的数据 ,是 下单时候接受到的
-	protected $insertFields = array('ids','pay_type','cur_name','cur_tel','cur_province','cur_city','cur_area','cur_address','beizhu');
+	protected $insertFields = array('pay_type','cur_name','cur_tel','cur_province','cur_city','cur_area','cur_address','beizhu');
         
 //	protected $updateFields = array('id','password','repassword');
 
         
 	protected $_validate = array(
-                array('ids', 'require', '订单中必须有商品！', 1, 'regex', 3),
                 array('pay_type', 'require', '必须选择付款方式！', 1, 'regex', 3),
             array('cur_name', 'require', '收货人为空！', 1, 'regex', 3),
             array('cur_tel', 'require', '收货人电话号码为空！', 1, 'regex', 3),
@@ -28,14 +27,15 @@ class OrderModel extends Model
           
 		// 添加订单前的检查工作
             // 1, 检查是否登录，只有登录才能下订单
-            //这里必须再次检查session，因为即使前面跳转到这个页面检查了一次，但是可能很长时间没操作，导致下单的时候session丢失
-            // 那么这个检查是必须的 。
+            // 这里个人感觉没有必要，因为 提交数据的时候，已经判断是否登录，能到这里，肯定登录了
+           
+            
             $m_id=session('m_id');
-            if(!$m_id)
-            {
-                $this->error="未登录不能下单";
-                return FALSE;
-            }
+//            if(!$m_id)
+//            {
+//                $this->error="未登录不能下单";
+//                return FALSE;
+//            }
                 
             // 2，检查订单里面是否有商品,有商品才能下订单
             // 这里要根据传过来的id集合，从购物车查询商品数据
@@ -45,13 +45,14 @@ class OrderModel extends Model
 
             // 这个数据是要传递到下面的增加之后的钩子函数里面的，所以上面的方法里面是需要 引用传递的。
             
-         $option['goods'] =$goods=$cartModel->cartList($ids);
+        $goods=$cartModel->cartList($ids);
          
-             // 这里我们还必须筛选一遍，下架的商品是不能再购物车里面的
+             // 这里我们还必须筛选一遍，下架的商品是不能在购物车里面的,这里面有可能前台
+         // 故意传递 下架商品的 购物车id.
            
-      
+        dump($goods);exit;
           
-         
+          $option['goods'] =$goods;
             if(!$goods)
             {
                 // 没有找到任何商品

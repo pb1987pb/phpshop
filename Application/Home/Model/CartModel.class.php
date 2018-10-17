@@ -197,14 +197,13 @@ class CartModel extends Model
               if($member_id)
                   {
  
-                  // 购物车里面显示的数据
+                  // 购物车里面显示的数据 ,购物车里面应该是可以显示下架的商品
                   $where=array(
                    'member_id'=>array('eq',$member_id)
                );
                   if($ids)
                   {
                     // 订单里面显示的商品数据，传递了id ,但是订单表里面不能 有 已经下架的商品出现
-                     // 
                     $where['id']=array('in',$ids);
                   }
                   
