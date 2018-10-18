@@ -10,7 +10,7 @@ class OrderModel extends Model
 
         
 	protected $_validate = array(
-                array('pay_type', 'require', '必须选择付款方式！', 1, 'regex', 3),
+            array('pay_type', 'require', '必须选择付款方式！', 1, 'regex', 3),
             array('cur_name', 'require', '收货人为空！', 1, 'regex', 3),
             array('cur_tel', 'require', '收货人电话号码为空！', 1, 'regex', 3),
              array('cur_province', 'require', '必须选择省份！', 1, 'regex', 3),
@@ -40,27 +40,29 @@ class OrderModel extends Model
             // 2，检查订单里面是否有商品,有商品才能下订单
             // 这里要根据传过来的id集合，从购物车查询商品数据
             
-          $option['ids'] = $ids=I('post.ids');
+          $ids=I('post.ids');
             $cartModel=D('cart');
 
-            // 这个数据是要传递到下面的增加之后的钩子函数里面的，所以上面的方法里面是需要 引用传递的。
-            
         $goods=$cartModel->cartList($ids);
-         
+        
+
              // 这里我们还必须筛选一遍，下架的商品是不能在购物车里面的,这里面有可能前台
          // 故意传递 下架商品的 购物车id.
            
-        dump($goods);exit;
-          
-          $option['goods'] =$goods;
+                //  筛选查询出来的购物车数据
+             $cartModel-> filtCar($goods,$ids);
+             
+             
+            // 筛选完之后判断    
             if(!$goods)
             {
                 // 没有找到任何商品
                 $this->error="未选中任何商品";
                 return FALSE;
             }
- 
-            
+ // 这个是要传递到下一个钩子函数准备的
+          $option['goods'] =$goods;
+          $option['ids'] =$ids;
             
             // 高并发的抢单，这里就要设定一个 锁 机制 ,为了保证这个锁是全局都可用，不至于这个方法用完了就释放，我们用对象属性
             // 来存储这个锁
@@ -74,9 +76,9 @@ class OrderModel extends Model
          
             foreach ($goods as $k=>$v)
             {
-                $total_price+=$v['price']*$v['goods_number']; //价钱累加
+                
                 // 商品总的库存量
-                $num=$goodnumberModel->fetchSql(true) ->field('number')->where(array(
+                $num=$goodnumberModel ->field('number')->where(array(
                     'good_id'=>array('eq',$v['goods_id']),
                     'attr_list'=>array('eq',$v['goods_attr_ids'])
                 ))->find();
@@ -85,11 +87,13 @@ class OrderModel extends Model
                 // 总的库存少于购物车的商品数量
                 if($num['number']<$v['goods_number'])
                 {
-//                       dump($num['number']);dump($v['goods_number']);
                       $this->error=$v['goods_name']."库存量不足";
                         return FALSE;
                 }
                 
+                $total_price+=$v['price']*$v['goods_number']; //价钱累加
+                
+             } 
                 // 通过了上面的3个检查之后，那么基本就可以下单了，补充其他字段
                 $data['addtime']=  time();
                 $data['total_price']=$total_price;
@@ -99,7 +103,7 @@ class OrderModel extends Model
                 //  为了确定三张表的操作都能成功：订单基本信息表，订单商品表，库存量表
                 // 开启事务的前提是相关表必须使用innodb引擎。
                 $this->startTrans();  
-            }
+           
             
 	}
 	
@@ -109,6 +113,7 @@ class OrderModel extends Model
         // 第三个 删除购物车中相应的商品
 	protected function _after_insert($data, $option)
 	{
+            
              $id = $data['id'];
              $ordergoodModel=D('order_goods');
              $goodnumberModel=D('good_number');
@@ -126,7 +131,7 @@ class OrderModel extends Model
                 if(!$ret)
                 {
                     $this->rollback();
-                    $this->erroe="插入订单表商品信息失败";
+                    $this->error="插入订单表商品信息失败";
                     return FALSE;
                 }
                 
@@ -136,11 +141,11 @@ class OrderModel extends Model
                      'good_id' => array('eq',$v['goods_id']),
                      'attr_list' => array('eq',$v['goods_attr_ids'])
                  ))->setDec('number',$v['goods_number']);
-               if($reduce===FALSE)
+               if($reduce === FALSE)
                {
                    // 这里就是修改库存失败
                     $this->rollback();
-                    $this->erroe="修改库存量失败";
+                    $this->error="修改库存量失败";
                     return FALSE;
                }
                  
@@ -162,4 +167,6 @@ class OrderModel extends Model
              
 	}
 	/************************************ 其他方法 ********************************************/
+        
+     
 }

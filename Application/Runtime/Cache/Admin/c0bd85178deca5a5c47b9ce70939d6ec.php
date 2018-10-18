@@ -22,7 +22,7 @@
 
 <!-- 列表 -->
 <div class="list-div" id="listDiv">
-      <form enctype="multipart/form-data" action="/index.php/Admin/Goods/goodnumber/id/40.html" method="post">
+      <form enctype="multipart/form-data" action="/index.php/Admin/Goods/goodnumber/id/30.html" method="post">
 	<table cellpadding="3" cellspacing="1">
     	<tr>
            <?php foreach($newshangpinattrData as $k=>$v): ?>

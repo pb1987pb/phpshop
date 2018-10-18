@@ -209,9 +209,8 @@ class CartModel extends Model
                   
                $data=$this->where($where)->select();   
                
-   
-               
-              }  else {
+              }  
+              else {
                   //没有登录，那么就从cookie里面获取,这个获取的是一个 一维数组，那么就转换为
                   //  从数据库查询出来的那种二维数组
                   $arr=cookie('shopcar')?unserialize(cookie('shopcar')):array();
@@ -230,7 +229,15 @@ class CartModel extends Model
               }
               // 获取到这些信息还不够，商品本身信息和属性的信息都还没查询出来。
             
-              $goodModel=D('goods');
+        
+              return $this->detailCarGood($data);
+         }
+         
+   
+         //  根据购物车的信息获取详细的信息
+       public  function  detailCarGood($data)
+         {
+                   $goodModel=D('goods');
               $shangpinattrModel=D('shangpin_attr');
               foreach ($data as $k => $v)
               {
@@ -241,7 +248,7 @@ class CartModel extends Model
                  // 获取到的内容存回这个二维数组
                 $data[$k]['goods_name']=$goodData['goods_name'];
                 $data[$k]['mid_logo']=$goodData['mid_logo'];
-                 $data[$k]['is_on_sale']=$goodData['is_on_sale'];   // 是否上架
+                $data[$k]['is_on_sale']=$goodData['is_on_sale'];   // 是否上架
                 // 计算实际的购买价格
                  $data[$k]['price']=$goodModel->getPrice($v['goods_id']);
                  //根据属性id计算出商品的属性名称和属性值，
@@ -257,10 +264,29 @@ class CartModel extends Model
                  }
           
               }
-              return $data;
+             return  $data;
          }
-         
-         //购物车修改数量,这里包含了删除商品的代码
+
+       // 订单里面过滤购物车商品，过滤下架的商品，防止别人故意传递下架商品的id进去。商品已经下架了还可以下订单购买。
+        function filtCar(&$carData,&$ids)
+        {
+             $newData = array();
+             $newids=array();
+               foreach($carData as $k => $v)
+          {
+              if($v['is_on_sale'] == "是")
+              {
+                  $newData[] = $v ;
+                  $newids[]=$v['id'];
+              }
+              
+          }
+          $carData = $newData;
+          $ids = implode(',',$newids);
+        }
+
+
+         //购物车修改数量,这里包含了删除购物车商品的代码
          public function cartNum($num,$id)
          {
              if($num<0)

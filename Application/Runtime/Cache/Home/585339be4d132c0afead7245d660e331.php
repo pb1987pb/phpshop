@@ -156,7 +156,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php  $tp = 0; foreach ($cartData as $k => $v): if($v['is_on_sale'] == '否') continue; ?>
+						<?php  $tp = 0; foreach ($cartData as $k => $v): ?>
 						<tr>
 							<td class="col1"><a href=""><?php showImage($v['mid_logo']); ?></a>  
 							<strong><a href="<?php echo U('Index/goods?id='.$v['goods_id']); ?>"><?php echo $v['goods_name']; ?></a></strong></td>
@@ -186,12 +186,12 @@
 		
                          <!-- 支付 start -->
                                 <div class="clear payleixing" id="pay">
-                             <div class="pay_type f_right weixin cur" data-type="1">
+                             <div class="pay_type f_right weixin cur" data-type="2">
                              <div class="img_conte f_left">
                                 <img src="/Public/Home/images/no_check.png" class="show"/><img src="/Public/Home/images/check.png" class="hidd"/>
                              </div>
                              <div class="tu f_left"><img src="/Public/Home/images/pay02.png"/></div></div>
-                             <div class="pay_type f_right" data-type="2">
+                             <div class="pay_type f_right" data-type="1">
                              <div class="img_conte f_left">
                                 <img src="/Public/Home/images/no_check.png" class="show"/><img src="/Public/Home/images/check.png" class="hidd"/>
                              </div>
@@ -546,14 +546,14 @@ function orderchck(){
    url :"/index.php/Home/Order/ajaxAdd",
 	dataType : "json",
    success:function(data){ 
-       alert(data.code);
+     
        if(data.code==-1){
                 //-1,就表示登录过期了，那么这里就要跳转到登录
                    window.location.href='/index.php/home/member/login';
                }
-      else if(data.code==1)
+      else if(data.code == 1)
      window.location.href='/index.php/home/Order/pay/order_id/'+data.order_id;
-        else if(data.code==0)
+        else if(data.code == 0)
         {
          
            console.log(data.mes); 
@@ -575,7 +575,7 @@ function orderchck(){
 
 
 
-
+// 初始化数据
 function init(){
                  $.ajax({
 	type : "get",
