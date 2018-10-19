@@ -66,6 +66,7 @@ class OrderController extends Controller {
      
     }
 
+       // ajax 下订单
     public function ajaxAdd()
     {
         // 获取登录凭证
@@ -103,11 +104,51 @@ class OrderController extends Controller {
 			));
         
     }
-     public function pay()
-     {
-         dump(I('get.order_id'));
-         exit;
-     }
-     
-    
+  
+       //  下单成功页面，这里会根据付款类型生成一个支付宝或者是微信的按钮
+      // 在这里是生成的支付宝的按钮
+    	public function order_success()
+	{
+		$btn = makeAlipayBtn(I('get.order_id'));
+		// 设置页面信息
+    	$this->assign(array(
+    		'btn' => $btn,
+    		'_page_title' => '下单成功',
+    		'_page_keywords' => '下单成功',
+    		'_page_description' => '下单成功',
+    	));
+    	$this->display();
+	}
+        
+        // 支付宝返回信息的地址
+        public function receive()
+        {
+            // 这里就需要调用支付宝的接口，来判断这个消息是否是支付宝发来的
+            require('./alipay/notify_url');
+        }
+        
+        	/**
+	 * 支付成功之后设置为已支付的状态 
+	 *
+	 * @param unknown_type $orderId
+	 */
+	public function setPaid($orderId)
+	{
+		/**
+		 * ************　更新定单的支付状态　＊＊＊＊＊＊＊＊＊＊＊＊＊／
+		 */
+		$this->where(array(
+			'id' => array('eq', $orderId),
+		))->save(array(
+			'pay_status' => '是',
+			'pay_time' => time(),
+		));
+		/************ 更新会员积分，一个积分一块钱 *******************/
+		$tp = $this->field('total_price,member_id')->find($orderId);
+		$memberModel = M('member');  // 因为如果用D生成模型，那么在修改字段时会调用这个模型的_before_update方法，但现在这个功能不需要调用这个这个方法，所以这里使用M生成父类模型这样就不会调用_before_update了
+		$memberModel->where(array(
+			'id' => array('eq', $tp['member_id']),
+		))->setInc('jifen', $tp['total_pricd']);
+	}
+        
 }
