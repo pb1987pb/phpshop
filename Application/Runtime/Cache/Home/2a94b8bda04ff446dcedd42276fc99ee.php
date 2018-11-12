@@ -224,7 +224,7 @@
        
            $.ajax({
 	type : "GET",
-	url : "/index.php/Home/Cart/ajaxCarCount",
+	url : "/index.php/Home/Public/ajaxCarCount",
 //	dataType : "json",
 	success : function(data)
 	{
@@ -237,7 +237,7 @@
           
                      $.ajax({
 	type : "GET",
-	url : "/index.php/Home/Cart/ajaxCarList",
+	url : "/index.php/Home/Public/ajaxCarList",
 	dataType : "json",
 	success : function(data)
 	{
@@ -656,8 +656,7 @@
 
 
 
-<script>
-    
+
     </script>
 	
 	<div style="clear:both;"></div>

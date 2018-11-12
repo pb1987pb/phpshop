@@ -24,8 +24,10 @@ class LoginController extends Controller
                 $this->error($model->getError());
               
     	}
-
-          if($result=$model->autoLogin()){
+     
+        // 进入登录页面，如果已经登录有session或者没有session但是能自动登录成功，都跳转到首页。
+        
+          if(session('id') ||$result=$model->autoLogin()){
                $this->redirect('Index/index');
               exit;
           }

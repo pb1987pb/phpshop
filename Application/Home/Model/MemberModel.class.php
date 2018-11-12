@@ -31,8 +31,8 @@ class MemberModel extends Model
         public $_login_validate  = array(
 		array('username', 'require', '用户名不能为空！', 1, 'regex', 3),
 		array('password', 'require', '密码不能为空！', 1, 'regex', 1), 
-                array('chkcode', 'require', '验证码不能为空！', 1, 'regex', 1), 
-                array('chkcode','check_verify','验证码错误',1,'callback')
+//                array('chkcode', 'require', '验证码不能为空！', 1, 'regex', 1), 
+//                array('chkcode','check_verify','验证码错误',1,'callback')
                 
 	);
         
@@ -61,8 +61,11 @@ class MemberModel extends Model
             if(!$user){
                 $this->error='用户名或者密码不正确';
                 return false;
-            }  else {
-              if($user['password']!=md5($password)){
+            }
+            
+            else {
+              if($user['password']!=md5($password))
+                  {
                   // 密码不正确
                    $this->error='用户名或者密码不正确';
                 return false;

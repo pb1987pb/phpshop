@@ -106,7 +106,8 @@ else
                          ))->getField('id');
              
                   // 有默认地址，并且这个地址不是自己，那么就要开启事物了
-               if($defid && $defid!=$option['where']['id']){
+               if($defid && $defid!=$option['where']['id'])
+                   {
                    $option['oldadd']=$defid;
                
                     // 开启事物。
@@ -136,6 +137,7 @@ else
             
         }
   
+        // 设置默认地址
         public function setDefault($id)
         {
             if(!$id)

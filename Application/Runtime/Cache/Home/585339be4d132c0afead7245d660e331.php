@@ -280,8 +280,8 @@
              
         <script>
             
-               var ischeck=0;
-                 var adddata={};
+               var ischeck=0; //当前选中的是0
+                var adddata={};
       
             
             $(function(){
@@ -351,9 +351,12 @@
 	dataType : "json",
 	success : function(data)
 	{
+              if(data.code==-1){
+                //-1,就表示登录过期了，那么这里就要跳转到登录
+                   window.location.href='/index.php/home/member/login';
+               }
             if(data.code==1){
                init();
-               
             }    
 	}
 });
@@ -370,6 +373,10 @@
 	dataType : "json",
 	success : function(data)
 	{
+              if(data.code==-1){
+                //-1,就表示登录过期了，那么这里就要跳转到登录
+                   window.location.href='/index.php/home/member/login';
+               }
             if(data.code==1){
                if(id == ischeck){
                    //删除的是选中的，那么此时选中的就要设置为0
@@ -423,6 +430,10 @@
 	dataType : "json",
    success:function(data){  
        
+         if(data.code==-1){
+                //-1,就表示登录过期了，那么这里就要跳转到登录
+                   window.location.href='/index.php/home/member/login';
+               }
     if(data.code==1){
            // 修改成功,或者增加成功，都把这个选中
         ischeck=data.id;
@@ -520,7 +531,7 @@ function orderchck(){
       return false;
      }
        var $mesf=  $li.data('sign');
- 
+
       
  name = $mesf.shr_name;
  tel = $mesf.shr_tel;
@@ -543,7 +554,7 @@ function orderchck(){
        pay_type: $('.pay_type.cur').data('type'),
        ids: $('input[name="ids"]').val()
    },
-   url :"/index.php/Home/Order/ajaxAdd",
+   url :"/index.php/Home/Ischeck/ajaxAdd",
 	dataType : "json",
    success:function(data){ 
      
@@ -552,7 +563,7 @@ function orderchck(){
                    window.location.href='/index.php/home/member/login';
                }
       else if(data.code == 1)
-     window.location.href='/index.php/home/Order/pay/order_id/'+data.order_id;
+     window.location.href='/index.php/home/Order/order_success/order_id/'+data.order_id;
         else if(data.code == 0)
         {
          
@@ -586,6 +597,7 @@ function init(){
    
               if(!ischeck)
               {
+                  //这个里面就是一开始进来的时候，渲染数据，把默认的选中。
                for(var j = 0,len=data.length;j < len; j++)
                    {
                

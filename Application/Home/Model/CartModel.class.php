@@ -45,7 +45,6 @@ class CartModel extends Model
         {
            
             $uid=session('m_id');// 获取登录人session
-            
             $ids=I('post.goods_attr_ids');//商品属性组合id ,这个有可能是null
            // 先排序 ,这个一定要先排序一下，属性顺序以错了就查询不出来库存量。
             //  因为库存量本身就是按照id的排序来存储的
@@ -76,7 +75,8 @@ class CartModel extends Model
                 ))->setInc('goods_number',$firnum); 
                    
                    
-               }  else {
+               } 
+               else {
                    // 在数据库里面没有查询到这个库存，那么就直接增加到数据库
                    //那么这里就调用父类的add方法，加到数据库
          
@@ -177,7 +177,8 @@ class CartModel extends Model
                    'member_id'=>array('eq',$member_id)
                ))->count();   
                
-              }  else {
+              }  
+              else {
                   //没有登录，那么就从cookie里面获取,这个获取的是一个 一维数组，那么就转换为
                   //  从数据库查询出来的那种二维数组
                   $arr=cookie('shopcar')?unserialize(cookie('shopcar')):array();
@@ -194,6 +195,7 @@ class CartModel extends Model
          public function cartList($ids="")
          {
               $member_id=session('m_id');
+              
               if($member_id)
                   {
  
@@ -294,10 +296,13 @@ class CartModel extends Model
                  $this->error="商品数量必须大于0";
                  return FALSE;
              } 
-                 //  查询到这个商品是否删除，要不然的修改数量没意义
+             $member_id=session('m_id');
+                 //  查询到这个商品是否下架或者删除，要不然的修改数量没意义
               $has= $this->where(array(
                    'id' =>array('eq',$id),
-                  'is_delete' => array('eq','否')
+                   'member_id'=>array('eq',$member_id),
+                  'is_on_sale' => array('eq','否'), //上架
+                  'is_delete' => array('eq','否') // 没删除
                 ))->find();
                  if($has)
                  {
@@ -318,8 +323,8 @@ class CartModel extends Model
                 ))->setField('goods_number',$num); 
                 return true;
                  } 
-                    // 登录没有查询到商品或者没登录查询到商品都会是非法商品
-              $this->error="非法商品";
+                 // 这个就是下架或者是已经删除的商品，在这里是不能操作数量的 
+              $this->error="修改非法商品";
                  return FALSE;
          }
          

@@ -1,13 +1,15 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class AddressController extends Controller {
+class AddressController extends AjaxController{
        // 地址控制器
     
      public function ajaxAlladd()
      {
          $addressModel = D('address');
-         $addData=$addressModel->select();
+         $addData=$addressModel->where(array(
+             'member_id'=>array('eq',$this->m_id)
+         ))->select();
          echo json_encode($addData);
 
      }

@@ -57,7 +57,9 @@ class MemberController extends Controller
 //                            
 
                               echo json_encode(array(
-				'code' => 1
+				'code' => 1,
+                                  'sessionId' =>'1234'
+                             
 			));
     				exit;
     			}

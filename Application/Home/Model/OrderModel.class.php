@@ -24,35 +24,20 @@ class OrderModel extends Model
 	protected function _before_insert(&$data, &$option)
 	{          
             
-          
-		// 添加订单前的检查工作
-            // 1, 检查是否登录，只有登录才能下订单
-            // 这里个人感觉没有必要，因为 提交数据的时候，已经判断是否登录，能到这里，肯定登录了
-           
             
             $m_id=session('m_id');
-//            if(!$m_id)
-//            {
-//                $this->error="未登录不能下单";
-//                return FALSE;
-//            }
-                
             // 2，检查订单里面是否有商品,有商品才能下订单
             // 这里要根据传过来的id集合，从购物车查询商品数据
             
           $ids=I('post.ids');
             $cartModel=D('cart');
-
         $goods=$cartModel->cartList($ids);
         
-
              // 这里我们还必须筛选一遍，下架的商品是不能在购物车里面的,这里面有可能前台
          // 故意传递 下架商品的 购物车id.
-           
                 //  筛选查询出来的购物车数据
              $cartModel-> filtCar($goods,$ids);
-             
-             
+
             // 筛选完之后判断    
             if(!$goods)
             {

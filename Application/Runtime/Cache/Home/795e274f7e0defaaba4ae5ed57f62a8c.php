@@ -241,7 +241,7 @@
        
            $.ajax({
 	type : "GET",
-	url : "/index.php/Home/Cart/ajaxCarCount",
+	url : "/index.php/Home/Public/ajaxCarCount",
 //	dataType : "json",
 	success : function(data)
 	{
@@ -254,7 +254,7 @@
           
                      $.ajax({
 	type : "GET",
-	url : "/index.php/Home/Cart/ajaxCarList",
+	url : "/index.php/Home/Public/ajaxCarList",
 	dataType : "json",
 	success : function(data)
 	{
@@ -907,7 +907,7 @@ $.ajax({
      
      $.ajax({
 	type : "POST",
-	url : "/index.php/Home/Cart/ajaxAdd",
+	url : "/index.php/Home/Public/ajaxAdd",
         data:$('.choose').serialize(),
 	dataType : "json",
 	success : function(data)

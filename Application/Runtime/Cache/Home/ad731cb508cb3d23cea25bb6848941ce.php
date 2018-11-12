@@ -298,7 +298,7 @@ function getTotal()
                 var id=dataobj.data('id');
             $.ajax({
 	type : "POST",
-	url : "/index.php/Home/Cart/ajaxCarNum",
+	url : "/index.php/Home/Ischeck/ajaxCarNum",
         data:{
             id:id,
              num:num
@@ -306,7 +306,6 @@ function getTotal()
 	dataType : "json",
 	success : function(data)
 	{
-            
             if(data.code == -1){
                 //-1,就表示登录过期了，那么这里就要跳转到登录
                    window.location.href='/index.php/home/member/login';
